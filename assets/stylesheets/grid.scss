@@ -1,0 +1,14 @@
+.clearfix {
+	&::before, &::after {
+		clear: both;
+		display: block;
+		content: "";
+	}
+}
+
+.row {
+	@extend .clearfix;
+	hr {
+		margin-bottom: $gutter-size;
+	}
+}

@@ -1,0 +1,16 @@
+.breadcrumb {
+	background: $extra-light-gray;
+	padding: 15px;
+	border-radius: 4px;
+
+	li {
+		display: inline-block;
+		color: $light-gray;
+		&.active {
+			&::before {
+				content: "/";
+				padding: 0 10px;
+			}
+		}
+	}
+}

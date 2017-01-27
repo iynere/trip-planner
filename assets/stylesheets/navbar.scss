@@ -1,0 +1,40 @@
+$nav-bg: #ddd;
+$nav-txt: #444;
+
+.navbar {
+  padding: 0 40px;
+  background-color: $nav-bg;
+  a {
+    color: $nav-txt;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+.navbar-inverse {
+  background-color: invert($nav-bg);
+  a {
+    color: invert($nav-txt);
+  }
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 1.2em;
+  margin-top: 13px;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

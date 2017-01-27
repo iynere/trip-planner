@@ -1,0 +1,58 @@
+@import "variables";
+@import "normalize";
+@import "modern-business";
+@import "navbar";
+@import "grid";
+@import "forms";
+@import "breadcrumb";
+@import "lists";
+@import "media-queries";
+
+* {
+  box-sizing: border-box;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.lead {
+	padding: 0;
+	
+	div {
+		padding: 0;
+		margin: 0;
+	}
+
+  img {
+ 	  width: 100vw;
+  }
+}
+
+.page-header {
+	small {
+		color: $light-gray; 
+		font-weight: 400;
+	}
+}
+
+
+.row {
+	hr {
+		margin-bottom: $gutter-size;
+	}
+}
+
+a {
+	color: $link-blue;
+	text-decoration: none;
+}
