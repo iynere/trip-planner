@@ -3,32 +3,33 @@
 {% block body %}
     <!-- Page Content -->
 
-    <div class="container">
+    <!-- <div class="container"> -->
       
-      <div class="row">
+      <!-- <div class="row"> -->
       
-        <div class="col-lg-12">
-          <h1 class="page-header"> Home <small>We'd Love to Hear From You!</small></h1>
+        <!-- <div class="col-lg-12"> -->
           <ol class="breadcrumb">
             <li class="active">Home</li>
             <li><a href="/">About</a></li>
             <li><a href="/">Contact</a></li>
+            <p class="made-by">made by aria christine r0se 2017</p>
           </ol>
-        </div>
-        
-        <div class="col-lg-8">
-          <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-          <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+        <!-- </div> -->
+<!--         
+        <div class="col-lg-12">
+          Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+          
+          <iframe id="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3> Hotels </h3>
-              <div class="dropdown">
+              <h4> Hotels </h4>
+              <div class="dropdown main">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Dropdown
+                  Andaz Wall Street
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -39,10 +40,10 @@
                   <li><a href="#">Separated link</a></li>
                 </ul>
               </div>
-            <h3> Restaurants </h3>
-              <div class="dropdown">
+            <h4> Restaurants </h4>
+              <div class="dropdown main">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Dropdown
+                  Bouley
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -53,10 +54,10 @@
                   <li><a href="#">Separated link</a></li>
                 </ul>
               </div>
-              <h3> Activities </h3>
-              <div class="dropdown">
+              <h4> Activities </h4>
+              <div class="dropdown main">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Dropdown
+                  South Street Seaport
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -71,17 +72,21 @@
           </div>
 
           <div id = "actvitiesForDay"> 
-            <h3> Days </h3>
             <div class="panel panel-default">
-              <div class="panel-heading">
+              <div class="panel-body days">
+                <h4 class="day">Days</h4>
                 <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default"><</button>
                 <button type="button" class="btn btn-default">1</button>
                 <button type="button" class="btn btn-default">2</button>
                 <button type="button" class="btn btn-default">3</button>
+                <button type="button" class="btn btn-default">></button>
+                <button type="button" class="btn btn-default rt-btn">+</button>
               </div>
             </div>
-              <div class="panel-body">
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aperiam iusto ad doloremque nam aspernatur quo sunt animi quaerat deserunt amet quia inventore asperiores, provident dicta, dolores assumenda, corrupti autem! </p>
+            <div class="panel-footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aperiam iusto ad doloremque nam aspernatur quo sunt animi quaerat deserunt amet quia inventore asperiores, provident dicta, dolores assumenda, corrupti autem!</p>
+                </div>
               </div>
           </div>
         </div>
