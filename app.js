@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var http = require('http');
+var db = require('./models');
 var path = require('path');
 var swig = require('swig');
 var morgan = require('morgan');
@@ -24,7 +24,7 @@ app.set('view cache', false);
 // all environments
 app.set('port', process.env.PORT || 3000); //allows us to say app.get('port') <-- very different from app.get that you are used to, same name but different implementation because of the number and type of parameters. This is a poor convention
 app.use(express.favicon());
-app.use(morgan('dev')); 
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
@@ -39,9 +39,13 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.contact);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+db.sync({force: true})
+   .then(function () {
+       app.listen(3000, function () {
+           console.log('Server is listening on port 3000!');
+       });
+   })
+   .catch(console.error);
 
 /* OLD from this morning
 
