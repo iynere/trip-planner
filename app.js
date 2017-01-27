@@ -43,4 +43,43 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
+/* OLD from this morning
 
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const routes = require('./routes');
+const nunjucks = require('nunjucks');
+const morgan = require('morgan');
+const path = require('path');
+
+// NUNJUCKS
+app.engine('html', nunjucks.render);
+app.set('view engine', 'html');
+nunjucks.configure('views', {noCache: true});
+
+// LOGGING
+app.use(morgan('dev'));
+
+// BODY PARSING
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(express.static(path.join(__dirname, '/views')));
+
+app.use(express.static('/public'));
+
+app.get('/', (req, res) => res.render('home'));
+
+// app.get('/about', routes.about);
+// app.get('/contact', routes.contact);
+
+app.use((error, req, res, next) => {
+	console.log(error);
+});
+
+app.listen(3000, () => {
+	console.log('live on 3000!');
+});
+
+module.exports = app; */
